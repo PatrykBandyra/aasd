@@ -1,7 +1,7 @@
 package com.example.aasd.agent
 
-import com.example.api.dto.AgentUserRegistrationDto
-import com.example.api.dto.QuizAnswersDto
+import com.example.aasd.dto.AgentUserRegistrationDto
+import com.example.aasd.dto.QuizAnswersDto
 import org.springframework.core.ParameterizedTypeReference
 import org.springframework.http.HttpStatusCode
 import org.springframework.http.MediaType

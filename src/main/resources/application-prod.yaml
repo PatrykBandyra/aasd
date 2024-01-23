@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false"
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  sql:
+    init:
+      mode: always
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  port: 8000
+  tomcat:
+    max-swallow-size: 100MB
+
+sigma:
+  root-url: "/api"
+  agents-url: "http://localhost:8002/agents"
+  jwt:
+    expiration-in-seconds: 3600

@@ -1,12 +1,12 @@
 package com.example.aasd.controller
 
-import com.example.api.dto.request.SignInRequest
-import com.example.api.dto.request.SignUpRequest
-import com.example.api.dto.response.SignInResponse
-import com.example.api.dto.response.SignUpResponse
-import com.example.api.model.SigmaUser
-import com.example.api.service.JwtGeneratorService
-import com.example.api.service.SigmaUserService
+import com.example.aasd.dto.request.SignInRequest
+import com.example.aasd.dto.request.SignUpRequest
+import com.example.aasd.dto.response.SignInResponse
+import com.example.aasd.dto.response.SignUpResponse
+import com.example.aasd.model.SigmaUser
+import com.example.aasd.service.JwtGeneratorService
+import com.example.aasd.service.SigmaUserService
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
