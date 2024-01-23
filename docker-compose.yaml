@@ -10,15 +10,23 @@ services:
       - db.env
     ports:
       - "3306:3306"
+    networks:
+      - mynetwork
 
   api:
     container_name: api
     depends_on:
       - db
-    restart: on-failure
+    restart: always
     env_file:
       - api.env
     build:
       context: .
     ports:
       - "${API_HOST_PORT}:${API_CONTAINER_PORT}"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
