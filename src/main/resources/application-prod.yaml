@@ -1,9 +1,10 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false"
     username: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
+
 
   jpa:
     hibernate:
