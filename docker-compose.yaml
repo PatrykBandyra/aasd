@@ -8,6 +8,8 @@ services:
     restart: always
     env_file:
       - db.env
+    ports:
+      - "3306:3306"
 
   api:
     container_name: api
